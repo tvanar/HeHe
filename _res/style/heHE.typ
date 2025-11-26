@@ -23,7 +23,7 @@
 ) = [
   #page(paper: "a5",
   background: [    
-      #if path != none [#image(path,height: 100%,fit: "stretch",alt: "hej")]]
+      #if path != none [#image(path,height: 100%,fit: "stretch")]]
       ,
       [ 
     
@@ -66,7 +66,6 @@
   month: none,
   inverted: false,
   path: none,
-  type: none,
   doc
 ) = [
   #page(paper: "a4",
@@ -127,14 +126,13 @@
   indent: false,
   inverted: false,
   path: none,
-  type: "pdf",
   doc
 ) = {
 
   set text(size: 12pt,font: "New Computer Modern",lang: "sv")
   
   counter(page).update(0)
-  if papersize == "a5" {frontpage_a5(month:month,path:path,type:type,inverted:inverted,[])} else {frontpage_a4(month:month,path:path,type:type,inverted:inverted,[])
+  if papersize == "a5" {frontpage_a5(month:month,path:path,inverted:inverted,[])} else {frontpage_a4(month:month,path:path,inverted:inverted,[])
   }
   pagebreak()
   
@@ -174,4 +172,3 @@
   
   doc
 }
-

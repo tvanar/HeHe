@@ -5,6 +5,5 @@
   papersize: "a4",
   path: none,
   inverted: false,
-  type: "png",
   indent: false
 )
